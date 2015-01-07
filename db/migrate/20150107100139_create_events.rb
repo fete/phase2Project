@@ -1,6 +1,6 @@
 class CreateEvents < ActiveRecord::Migration
   def change
-  	create_table :tasks do |t|
+  	create_table :events do |t|
  	  t.string     :title
  	  t.text       :description
  	  t.string     :url
