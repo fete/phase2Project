@@ -1,5 +1,5 @@
+<%= erb :'event/new' %>
 <% @events.each do |event| %>
 <%= erb :'event/single', locals: {event: event} %>
 <% end %>
 
-<%= erb :'event/new' %>
