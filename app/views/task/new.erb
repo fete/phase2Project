@@ -1,0 +1,8 @@
+<!-- form for the new task -->
+<form action="/tasks" method="POST"> 
+<!-- /tasks in action refers to the route -->
+Task:<br>
+<input type="text" name="task[description]" placeholder="description">
+<!-- "task[description]" values of the input will be nested together in the hash created by the params[:task] therefore we won't have to make separate calls for the attributes of the obj.-->
+<input type="submit">
+</form>

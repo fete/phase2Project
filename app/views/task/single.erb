@@ -1,0 +1,18 @@
+<!-- shows single tasks -->
+<div class="task">
+  <p class="description"> <%= task.description %> </p>
+  
+
+  <form action="/task/<% task.id %>/complete" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    <input type="submit" value="Complete">
+	
+  </form>
+
+  <form action='/task/<%= task.id %>' method="POST"> 
+<!-- action attribute used to inform the browser what page or script to call -->
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete">
+  </form>
+
+</div>
