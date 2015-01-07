@@ -1,0 +1,9 @@
+<div>
+  <p class="description"> <%= event.title %> </p>
+  <p class="description"> <%= event.description %> </p>
+  <form action='/event/<%= event.id %>' method="POST"> 
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete">
+  </form>
+
+</div>
