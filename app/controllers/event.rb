@@ -39,3 +39,10 @@ put '/event/:id' do |id|
   event.update(params[:event])
   redirect ("event/#{event.id}")
 end
+
+#Delete
+delete '/event/:id' do |id|
+  event = Event.find(id)
+  event.destroy
+  redirect "/events/all"
+end
