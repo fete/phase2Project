@@ -1,0 +1,5 @@
+<% @events.each do |event| %>
+<%= erb :'event/single', locals: {task: task} %>
+<% end %>
+
+<%= erb :'event/new' %>
