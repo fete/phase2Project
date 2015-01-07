@@ -1,6 +1,6 @@
 class CreateUserEvents < ActiveRecord::Migration
   def change
-  	create_table :users do |t|
+  	create_table :user_events do |t|
   	  t.references :user
   	  t.references :event 
 
