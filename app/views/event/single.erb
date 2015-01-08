@@ -8,13 +8,16 @@
   <div class="edit_wrapper">
     <%= erb :'event/edit', locals: {event: event} %>
   </div>
+  
+  <div class="event_buttons">
+    <form action='/event/<%= event.id %>' method="POST" class="delete_form"> 
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="Delete">
+     
+    </form>
+	   <a id="wassup" href="<%= event.id %>/edit" class="edit_link">Edit</a>
+   </div>
 
-  <form action='/event/<%= event.id %>' method="POST" class="delete_button"> 
-    <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="Delete">
-     <a href="<%= event.id %>/edit" class="edit_link">Edit</a>
-
-  </form>
 
 
 </div>
