@@ -8,14 +8,25 @@ $(document).ready(function() {
 //Identify the obj(button) then the click event(.click), followed by a function 
 //that allows you to run code on that click event.
   //Delete
-  $('.event').on('submit', 'form.delete_form')
+  // $('.event').on('submit', 'form.delete_form'), function (event){
+  //   event.preventDefault();
+  //   var $target = $(event.targent);
+  //   $.ajax({
+  //     url: $target.attr('action'),
+  //     type: 'DELETE'
+  //   }).done(function(response) {
+  //     $target.closest('.event').remove();
+
+  //   });
+  //  });
 
   // Edit
   $('.event').on('click', 'a.edit_link', function(event) {
     event.preventDefault();
     
-    var $target = $(event.target);
-    $target.closest('.event').children('.edit_wrapper').show;
+    // var $target = $(event.target);
+    // $target.closest('.event >.edit_wrapper').show;
+    $target.closest('.event >.edit_wrapper').show();
 
     // $.ajax({
     //   type:"POST"
