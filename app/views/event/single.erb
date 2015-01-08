@@ -1,8 +1,14 @@
-<div>
+<div class="event">
 
-  <p class="description"> <%= event.title %> </p>
-  <p class="description"> <%= event.description %> </p>
-  <%= erb :'event/edit', locals: {event: event} %>
+  <div class="event_content">
+    <p class="description"> <%= event.title %> </p>
+    <p class="description"> <%= event.description %> </p>
+  </div>
+
+  <div class="edit_wrapper">
+    <%= erb :'event/edit', locals: {event: event} %>
+  </div>
+
   <form action='/event/<%= event.id %>' method="POST" class="delete_button"> 
     <input type="hidden" name="_method" value="DELETE">
     <input type="submit" value="Delete">
