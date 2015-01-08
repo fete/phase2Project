@@ -2,4 +2,16 @@
   width: 100%;
   height: 100%;
   position: absolute;
+  
+}
+
+body {
+	/*background-image: url("http://fullhdwp.com/images/wallpapers/Trinidad-and-Tobago-wallpaper.jpg");
+	*/
+	background-color: red;
+
+}
+
+.edit_wrapper {
+	display: none;
 }
