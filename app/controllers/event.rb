@@ -31,7 +31,7 @@ end
 #Update
 get '/events/:id/edit' do |id|
   @event = Event.find(id)
-  erb :'event/edit', locals{event :@event}
+  erb :'event/edit', locals: {event: @event}
 end
 
 put '/event/:id' do |id|
