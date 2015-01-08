@@ -25,19 +25,19 @@ end
 post '/events' do 
   params[:event][:user_id] = current_user.id 
   event = Event.create(params[:event])
-  redirect ("/event/#{event.id}")
+  redirect ("/")
 end
 
 #Update
-get '/event/:id/edit' do |id|
+get '/events/:id/edit' do |id|
   @event = Event.find(id)
-  erb :'event/edit'
+  erb :'event/edit', locals{event :@event}
 end
 
 put '/event/:id' do |id|
   event = Event.find(id)
   event.update(params[:event])
-  redirect ("event/#{event.id}")
+  redirect ("/")
 end
 
 #Delete
